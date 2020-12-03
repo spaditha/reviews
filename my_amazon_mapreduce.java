@@ -207,7 +207,6 @@ public class my_amazon_mapreduce extends Configured implements Tool {
 		String subText = isNegativeReview ? "Is Negative Reviews: true" : "Is Positive Reviews: true";
 		sb.append(subText);
 		sb.append("\n");
-    
 		sb.append("Is Verified: ");
 		sb.append(verified);
 		sb.append("\n");
