@@ -126,76 +126,11 @@ public class my_amazon_mapreduce extends Configured implements Tool {
           "Bucket 9: (400,450]" + "\n" +
           "Bucket 10: (450,450>]" + "\n") , one);*/
         
-        if((overallrating == 1.0  || overallrating == 2.0) && verified == true){
-            
-            if(st.countTokens() <= 50){context.write(new Text("Bucket: 1" + "\n" + "Verified Negative Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else if(st.countTokens() > 50 && st.countTokens() <= 100){context.write(new Text("Bucket: 2" + "\n" + "Is Negative Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else if(st.countTokens() > 100 && st.countTokens() <= 150){context.write(new Text("Bucket: 3" + "\n" + "Is Negative Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else if(st.countTokens() > 150 && st.countTokens() <= 200){context.write(new Text("Bucket: 4" + "\n" + "Is Negative Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else if(st.countTokens() > 200 && st.countTokens() <= 250){context.write(new Text("Bucket: 5" + "\n" + "Is Negative Reviews: true" +  "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else if(st.countTokens() > 250 && st.countTokens() <= 300){context.write(new Text("Bucket: 6" + "\n" + "Is Negative Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else if(st.countTokens() > 300 && st.countTokens() <= 350){context.write(new Text("Bucket: 7" + "\n" + "Is Negative Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else if(st.countTokens() > 350 && st.countTokens() <= 400){context.write(new Text("Bucket: 8" + "\n" + "Is Negative Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else if(st.countTokens() > 400 && st.countTokens() <= 450){context.write(new Text("Bucket: 9" + "\n" + "Is Negative Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else{context.write(new Text("Bucket: 10" + "\n" + "Is Negative Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-   
-              
-              
-        } else if ((overallrating == 1.0  || overallrating == 2.0) && verified == false){
-            
-            if(st.countTokens() <= 50){ context.write(new Text("Bucket: 1" + "\n" + "Is Negative Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else if(st.countTokens() > 50 && st.countTokens() <= 100){context.write(new Text("Bucket: 2" + "\n" + "Is Negative Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else if(st.countTokens() > 100 && st.countTokens() <= 150){context.write(new Text("Bucket: 3" + "\n" + "Is Negative Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else if(st.countTokens() > 150 && st.countTokens() <= 200){context.write(new Text("Bucket: 4" + "\n" + "Is Negative Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else if(st.countTokens() > 200 && st.countTokens() <= 250){context.write(new Text("Bucket: 5" + "\n" + "Is Negative Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else if(st.countTokens() > 250 && st.countTokens() <= 300){context.write(new Text("Bucket: 6" + "\n" + "Is Negative Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else if(st.countTokens() > 300 && st.countTokens() <= 350){context.write(new Text("Bucket: 7" + "\n" + "Is Negative Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else if(st.countTokens() > 350 && st.countTokens() <= 400){context.write(new Text("Bucket: 8" + "\n" + "Is Negative Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else if(st.countTokens() > 400 && st.countTokens() <= 450){context.write(new Text("Bucket: 9" + "\n" + "Is Negative Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else{context.write(new Text("Bucket: 10" + "\n" + "Is Negative Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-           
-           
-            
-        } else if ((overallrating == 4.0 || overallrating == 5.0) && verified == false){
-            
-            if(st.countTokens() <= 50){ context.write(new Text("Bucket: 1" + "\n" + "Is Positive Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else if(st.countTokens() > 50 && st.countTokens() <= 100){context.write(new Text("Bucket: 2" + "\n" + "Is Positive Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else if(st.countTokens() > 100 && st.countTokens() <= 150){context.write(new Text("Bucket: 3" + "\n" + "Is Positive Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else if(st.countTokens() > 150 && st.countTokens() <= 200){context.write(new Text("Bucket: 4" + "\n" + "Is Positive Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else if(st.countTokens() > 200 && st.countTokens() <= 250){context.write(new Text("Bucket: 5" + "\n" + "Is Positive Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else if(st.countTokens() > 250 && st.countTokens() <= 300){context.write(new Text("Bucket: 6" + "\n" + "Is Positive Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else if(st.countTokens() > 300 && st.countTokens() <= 350){context.write(new Text("Bucket: 7" + "\n" + "Is Positive Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else if(st.countTokens() > 350 && st.countTokens() <= 400){context.write(new Text("Bucket: 8" + "\n" + "Is Positive Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else if(st.countTokens() > 400 && st.countTokens() <= 450){context.write(new Text("Bucket: 9" + "\n" + "Is Positive Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else{context.write(new Text("Bucket: 10" + "\n" + "Is Positive Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-         
-            
-            
-        }else if ((overallrating == 4.0 || overallrating == 5.0) && verified == true){
-            
-            if(st.countTokens() <= 50){ context.write(new Text("Bucket: 1" + "\n" + "Is Positive Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else if(st.countTokens() > 50 && st.countTokens() <= 100){context.write(new Text("Bucket: 2" + "\n" + "Is Positive Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else if(st.countTokens() > 100 && st.countTokens() <= 150){context.write(new Text("Bucket: 3" + "\n" + "Is Positive Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else if(st.countTokens() > 150 && st.countTokens() <= 200){context.write(new Text("Bucket: 4" + "\n" + "Is Positive Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else if(st.countTokens() > 200 && st.countTokens() <= 250){context.write(new Text("Bucket: 5" + "\n" + "Is Positive Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else if(st.countTokens() > 250 && st.countTokens() <= 300){context.write(new Text("Bucket: 6" + "\n" + "Is Positive Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else if(st.countTokens() > 300 && st.countTokens() <= 350){context.write(new Text("Bucket: 7" + "\n" + "Is Positive Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else if(st.countTokens() > 350 && st.countTokens() <= 400){context.write(new Text("Bucket: 8" + "\n" + "Is Positive Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else if(st.countTokens() > 400 && st.countTokens() <= 450){context.write(new Text("Bucket: 9" + "\n" + "Is Positive Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-              else{context.write(new Text("Bucket: 10" + "\n" + "Is Positive Reviews: true" + "\nIs Verified: " + verified + "\n" + "Counts: " + "\n"), one);}
-         
-      
-           
-            
-        }
-             
-      
-        
-     
-        
-         
-
-     
+		if (overallrating == 1.0 || overallrating == 2.0) {
+			mapToBucket(st.countTokens(), verified, true);
+		} else if (overallrating == 4.0 || overallrating == 5.0) {
+			mapToBucket(st.countTokens(), verified, false);
+		}
         
 //           if(overallrating == 1.0 && verified == true){
    
@@ -240,16 +175,8 @@ public class my_amazon_mapreduce extends Configured implements Tool {
         
         
       
-         
-      
-        
-        
-      
 // ####################################################################################################################################################
        
-
-        
-
         // Here we increment a counter that we can read when the job is done
       rowsProcessed.increment(1);
       } catch (Exception e) {
@@ -257,6 +184,38 @@ public class my_amazon_mapreduce extends Configured implements Tool {
       }
     }
   }
+  
+	public static void mapToBucket(int tokens, boolean verified, boolean isNegativeReview){
+		if(tokens <= 50){context.write(new Text(getTextString(verified, 1, isNegativeReview)), one);}
+        else if(tokens > 50 && tokens <= 100){context.write(new Text(getTextString(verified, 2, isNegativeReview)), one);}
+        else if(tokens > 100 && tokens <= 150){context.write(new Text(getTextString(verified, 3, isNegativeReview)), one);}
+        else if(tokens > 150 && tokens <= 200){context.write(new Text(getTextString(verified, 4, isNegativeReview)), one);}
+        else if(tokens > 200 && tokens <= 250){context.write(new Text(getTextString(verified, 5, isNegativeReview)), one);}
+        else if(tokens > 250 && tokens <= 300){context.write(new Text(getTextString(verified, 6, isNegativeReview)), one);}
+        else if(tokens > 300 && tokens <= 350){context.write(new Text(getTextString(verified, 7, isNegativeReview)), one);}
+        else if(tokens > 350 && tokens <= 400){context.write(new Text(getTextString(verified, 8, isNegativeReview)), one);}
+        else if(tokens > 400 && tokens <= 450){context.write(new Text(getTextString(verified, 9, isNegativeReview)), one);}
+        else{context.write(new Text(getTextString(verified, 10, isNegativeReview)), one);}
+
+	}
+	public static String getTextString(boolean verified, int bucketId, boolean isNegativeReview){
+
+		StringBuilder sb = new StringBuilder();
+		sb.append("Bucket: ");
+		sb.append(bucketId);
+		sb.append("\n");
+		String subText = isNegativeReview ? "Is Negative Reviews: true" : "Is Positive Reviews: true";
+		sb.append(subText);
+		sb.append("\n");
+    
+		sb.append("Is Verified: ");
+		sb.append(verified);
+		sb.append("\n");
+		sb.append("Counts: ");
+		sb.append("\n");
+		return sb.toString();
+	}
+
 
   // Reducer to simply sum up the values with the same key (text)
   // The reducer will run until all values that have the same key are combined
