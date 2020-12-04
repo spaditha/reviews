@@ -12,7 +12,7 @@
 7. This is the final step  
  - Note that you will need to delete the output folder if it already exists: `hadoop fs -rm -r /user/spaditha/AmazonReviewsWithBuckets` otherwise you will get an "Exception in thread "main" org.apache.hadoop.mapred.FileAlreadyExistsException: Output directory hdfs://dsba-nameservice/user/... type of error.
  - Now we execute the map-reduce job: ` HADOOP_CLASSPATH=$(hbase mapredcp):/etc/hbase/conf:process_Reviewewithlength.jar hadoop jar process_Reviewewithlength.jar AmazonReviewsWithLength '/user/spaditha/AmazonReviewsWithBuckets'`
- - Once that job completes, you can concatenate the output across all output files with: `hadoop fs -cat /user/spaditha/AmazonReviewsWithBuckets/*
+ - Once that job completes, you can concatenate the output across all output files with: `hadoop fs -cat /user/spaditha/AmazonReviewsWithBuckets/*`
  8. store the output to text  `hadoop fs -cat /user/spaditha/AmazonReviewsWithBuckets/* > AmazonReviewsWithBuckets.txt`
  
  The output is: in AmazonReviewsWithBuckets.txt
