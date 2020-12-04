@@ -101,7 +101,7 @@ public class AmazonReviewsWithLength extends Configured implements Tool {
       try {
         // Here we get the json data (stored as a string) from the appropriate column
         String jsonString = new String(value.getValue(CF_NAME, QUALIFIER));
-
+	
         // Now we parse the string into a JsonElement so we can dig into it
         JsonElement jsonTree = parser.parse(jsonString);
         JsonObject jsonObject = jsonTree.getAsJsonObject();
@@ -213,7 +213,6 @@ try {
 		sb.append(verified);
 		sb.append("\n");
 		sb.append("Counts: ");
-		sb.append("\n");
 		return sb.toString();
 	}
   }
