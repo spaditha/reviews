@@ -184,6 +184,7 @@ public class AmazonReviewsWithLength extends Configured implements Tool {
       }
     }
 	public void mapToBucket(int tokens, boolean verified, boolean isNegativeReview, Context context){
+try {
 		if(tokens <= 50){context.write(new Text(getTextString(verified, 1, isNegativeReview)), one);}
         else if(tokens > 50 && tokens <= 100){context.write(new Text(getTextString(verified, 2, isNegativeReview)), one);}
         else if(tokens > 100 && tokens <= 150){context.write(new Text(getTextString(verified, 3, isNegativeReview)), one);}
@@ -194,6 +195,8 @@ public class AmazonReviewsWithLength extends Configured implements Tool {
         else if(tokens > 350 && tokens <= 400){context.write(new Text(getTextString(verified, 8, isNegativeReview)), one);}
         else if(tokens > 400 && tokens <= 450){context.write(new Text(getTextString(verified, 9, isNegativeReview)), one);}
         else{context.write(new Text(getTextString(verified, 10, isNegativeReview)), one);}
+
+catch (Exception in maptobucket) }
 
 	}
 	public String getTextString(boolean verified, int bucketId, boolean isNegativeReview){
