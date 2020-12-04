@@ -127,9 +127,9 @@ public class AmazonReviewsWithLength extends Configured implements Tool {
           "Bucket 10: (450,450>]" + "\n") , one);*/
         
 		if (overallrating == 1.0 || overallrating == 2.0) {
-			mapToBucket(st.countTokens(), verified, true);
+			mapToBucket(st.countTokens(), verified, true, context);
 		} else if (overallrating == 4.0 || overallrating == 5.0) {
-			mapToBucket(st.countTokens(), verified, false);
+			mapToBucket(st.countTokens(), verified, false, context);
 		}
         
 //           if(overallrating == 1.0 && verified == true){
@@ -185,7 +185,7 @@ public class AmazonReviewsWithLength extends Configured implements Tool {
     }
   }
   
-	public static void mapToBucket(int tokens, boolean verified, boolean isNegativeReview){
+	public static void mapToBucket(int tokens, boolean verified, boolean isNegativeReview, Context context){
 		if(tokens <= 50){context.write(new Text(getTextString(verified, 1, isNegativeReview)), one);}
         else if(tokens > 50 && tokens <= 100){context.write(new Text(getTextString(verified, 2, isNegativeReview)), one);}
         else if(tokens > 100 && tokens <= 150){context.write(new Text(getTextString(verified, 3, isNegativeReview)), one);}
