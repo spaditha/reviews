@@ -183,9 +183,7 @@ public class AmazonReviewsWithLength extends Configured implements Tool {
         LOG.error("Error in MAP process: " + e.getMessage(), e);
       }
     }
-  }
-  
-	public static void mapToBucket(int tokens, boolean verified, boolean isNegativeReview, Context context){
+	public void mapToBucket(int tokens, boolean verified, boolean isNegativeReview){
 		if(tokens <= 50){context.write(new Text(getTextString(verified, 1, isNegativeReview)), one);}
         else if(tokens > 50 && tokens <= 100){context.write(new Text(getTextString(verified, 2, isNegativeReview)), one);}
         else if(tokens > 100 && tokens <= 150){context.write(new Text(getTextString(verified, 3, isNegativeReview)), one);}
@@ -198,7 +196,7 @@ public class AmazonReviewsWithLength extends Configured implements Tool {
         else{context.write(new Text(getTextString(verified, 10, isNegativeReview)), one);}
 
 	}
-	public static String getTextString(boolean verified, int bucketId, boolean isNegativeReview){
+	public String getTextString(boolean verified, int bucketId, boolean isNegativeReview){
 
 		StringBuilder sb = new StringBuilder();
 		sb.append("Bucket: ");
@@ -214,6 +212,8 @@ public class AmazonReviewsWithLength extends Configured implements Tool {
 		sb.append("\n");
 		return sb.toString();
 	}
+  }
+  
 
 
   // Reducer to simply sum up the values with the same key (text)
