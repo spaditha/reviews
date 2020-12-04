@@ -1,0 +1,160 @@
+Bucket: 2
+Is Positive Reviews: true
+Is Verified: false
+Counts: 	3491551
+Bucket: 7
+Is Negative Reviews: true
+Is Verified: false
+Counts: 	62265
+Bucket: 4
+Is Positive Reviews: true
+Is Verified: false
+Counts: 	1379321
+Bucket: 9
+Is Negative Reviews: true
+Is Verified: false
+Counts: 	32584
+Bucket: 6
+Is Positive Reviews: true
+Is Verified: false
+Counts: 	690417
+Bucket: 8
+Is Positive Reviews: true
+Is Verified: false
+Counts: 	368863
+Bucket: 9
+Is Positive Reviews: true
+Is Verified: true
+Counts: 	130658
+Bucket: 5
+Is Positive Reviews: true
+Is Verified: true
+Counts: 	836112
+Bucket: 7
+Is Negative Reviews: true
+Is Verified: true
+Counts: 	50272
+Bucket: 1
+Is Positive Reviews: true
+Is Verified: true
+Counts: 	85725325
+Bucket: 3
+Is Negative Reviews: true
+Is Verified: true
+Counts: 	794654
+Bucket: 10
+Is Positive Reviews: true
+Is Verified: true
+Counts: 	389718
+Bucket: 10
+Is Positive Reviews: true
+Is Verified: false
+Counts: 	904660
+Bucket: 6
+Is Positive Reviews: true
+Is Verified: true
+Counts: 	470212
+Bucket: 8
+Is Negative Reviews: true
+Is Verified: true
+Counts: 	32276
+Bucket: 2
+Is Positive Reviews: true
+Is Verified: true
+Counts: 	13729958
+Bucket: 4
+Is Negative Reviews: true
+Is Verified: true
+Counts: 	327743
+Bucket: 2
+Is Negative Reviews: true
+Is Verified: false
+Counts: 	703769
+Bucket: 4
+Is Negative Reviews: true
+Is Verified: false
+Counts: 	229883
+Bucket: 1
+Is Positive Reviews: true
+Is Verified: false
+Counts: 	7184983
+Bucket: 6
+Is Negative Reviews: true
+Is Verified: false
+Counts: 	91832
+Bucket: 3
+Is Positive Reviews: true
+Is Verified: false
+Counts: 	2107157
+Bucket: 8
+Is Negative Reviews: true
+Is Verified: false
+Counts: 	43902
+Bucket: 5
+Is Positive Reviews: true
+Is Verified: false
+Counts: 	961651
+Bucket: 7
+Is Positive Reviews: true
+Is Verified: false
+Counts: 	502366
+Bucket: 9
+Is Positive Reviews: true
+Is Verified: false
+Counts: 	273416
+Bucket: 7
+Is Positive Reviews: true
+Is Verified: true
+Counts: 	289494
+Bucket: 9
+Is Negative Reviews: true
+Is Verified: true
+Counts: 	21722
+Bucket: 3
+Is Positive Reviews: true
+Is Verified: true
+Counts: 	4087068
+Bucket: 5
+Is Negative Reviews: true
+Is Verified: true
+Counts: 	156928
+Bucket: 1
+Is Negative Reviews: true
+Is Verified: true
+Counts: 	9300165
+Bucket: 10
+Is Negative Reviews: true
+Is Verified: false
+Counts: 	116418
+Bucket: 10
+Is Negative Reviews: true
+Is Verified: true
+Counts: 	61672
+Bucket: 8
+Is Positive Reviews: true
+Is Verified: true
+Counts: 	190965
+Bucket: 4
+Is Positive Reviews: true
+Is Verified: true
+Counts: 	1692209
+Bucket: 6
+Is Negative Reviews: true
+Is Verified: true
+Counts: 	84784
+Bucket: 1
+Is Negative Reviews: true
+Is Verified: false
+Counts: 	1035929
+Bucket: 2
+Is Negative Reviews: true
+Is Verified: true
+Counts: 	2451453
+Bucket: 3
+Is Negative Reviews: true
+Is Verified: false
+Counts: 	400018
+Bucket: 5
+Is Negative Reviews: true
+Is Verified: false
+Counts: 	140609
