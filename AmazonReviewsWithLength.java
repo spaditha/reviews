@@ -196,8 +196,9 @@ try {
         else if(tokens > 400 && tokens <= 450){context.write(new Text(getTextString(verified, 9, isNegativeReview)), one);}
         else{context.write(new Text(getTextString(verified, 10, isNegativeReview)), one);}
 
-catch (Exception in maptobucket) }
-
+     } catch (Exception e) {
+        LOG.error("Error in MAP tobucket: " + e.getMessage(), e);
+      }
 	}
 	public String getTextString(boolean verified, int bucketId, boolean isNegativeReview){
 
